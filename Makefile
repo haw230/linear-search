@@ -1,8 +1,6 @@
-.PHONY: test
+.PHONY: test test2
 
-TAG="\n\n\033[0;32m\#\#\# "
-END=" \#\#\# \033[0m\n"
+TEST_PATH = tests/
 
 test:
-	@echo $(TAG)Running tests$(END)
-	PYTHONPATH=. py.test tests
+	@cd $(TEST_PATH) && python test_main.py
